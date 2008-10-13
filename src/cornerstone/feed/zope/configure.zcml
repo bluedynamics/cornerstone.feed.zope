@@ -1,0 +1,11 @@
+<configure xmlns="http://namespaces.zope.org/zope">
+
+	<include package="cornerstone.feed.core" />
+           
+    <adapter factory=".namedtraverser.FeedTraverser"
+    		 for="* zope.publisher.interfaces.http.IHTTPRequest"
+        	 name="feed" />
+        	 
+    <adapter factory=".publishtraverser.FeedPublishTraverse" />
+        	 
+</configure>
