@@ -16,7 +16,7 @@ class FeedPublishTraverse(DefaultPublishTraverse):
     implements(IBrowserPublisher)
     adapts(IFeed, IDefaultBrowserLayer)
     
-    def publishTraverse(self, request, name):            
+    def publishTraverse(self, request, name):
         generator = ZopeFeedGenerator(self.context, name, request)
         generator = generator.__of__(aq_inner(self.context))
         return generator

@@ -19,7 +19,6 @@ class FeedTraverser(object):
         self.request = request
         
     def traverse(self, name, ignore):
-        print name
         feed = queryAdapter(self.context, IFeed)
         if feed is None:
             raise AttributeError, "No feed factory found!"
