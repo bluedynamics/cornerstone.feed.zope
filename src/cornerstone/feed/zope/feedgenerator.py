@@ -1,10 +1,10 @@
 # Copyright 2008-2009, BlueDynamics Alliance - http://bluedynamics.com
 # Zope Public License (ZPL)
 
-from Acquisition import Implicit
+from Acquisition import Explicit
 from cornerstone.feed.core.feedgenerator import FeedGenerator
 
-class ZopeFeedGenerator(FeedGenerator, Implicit):
+class ZopeFeedGenerator(FeedGenerator, Explicit):
     
     def __init__(self, feed, name, request):
         FeedGenerator.__init__(self, feed, name)
